@@ -1,4 +1,114 @@
 
+public class Student {
+
+    private int id;
+    private String FirstName;
+    private String lastName;
+    private String Major;
+    private String mobile;
+    private int bdate;
+    private int year;
+    private double GPA;
+
+    public Student(int id, String FirstName, String lastName, String Major, String mobile, int bdate, int year) {
+        this.id = id;
+        this.FirstName = FirstName;
+        this.lastName = lastName;
+        this.Major = Major;
+        this.mobile = mobile;
+        this.bdate = bdate;
+        this.year = year;
+        GPA = 0;
+    }
+
+    public Student(int id, String FirstName, String lastName, String Major, String mobile, int bdate) {
+        this.id = id;
+        this.FirstName = FirstName;
+        this.lastName = lastName;
+        this.Major = Major;
+        this.mobile = mobile;
+        this.bdate = bdate;
+        this.year = 1;
+        //Gpa when th e student start will be 0 
+        this.GPA = 0;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getMajor() {
+        return Major;
+    }
+
+    public void setMajor(String Major) {
+        this.Major = Major;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public int getBdate() {
+        return bdate;
+    }
+
+    public void setBdate(int bdate) {
+        this.bdate = bdate;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    //Setting year must be larger than th current one
+    public void setYear(int year) {
+        if (year > this.year) {
+            this.year = year;
+        } else {
+            System.out.println("Error");
+        }
+    }
+
+    public double getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    //static average can be used from any where 
+    public static double getAvergaeOfGpa(int year, double Gpa) {
+        return Gpa / year;
+
+    }
+}
+
 public class Az {
 
 	public static void main(String[] args) {
